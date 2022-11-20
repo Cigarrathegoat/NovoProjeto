@@ -16,6 +16,7 @@ public class ApplicantAPI {
 
     @PostMapping ("/new")
     public SingleApplicantResponseDTO addWithBody(@RequestBody Applicant applicant){
+        System.out.println("git send test");
         return SingleApplicantResponseDTO.builder()
                 .result(applicantService.applicantSaver(applicant.getFirstName(),
                         applicant.getLastName(), applicant.getAge(), applicant.getHeight(),
